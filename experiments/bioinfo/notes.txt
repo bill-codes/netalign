@@ -1,0 +1,70 @@
+David Gleich's Notes on Graph Parsing
+=====================================
+
+Overall: contains parsed files from Singh et al.'s
+IsoRank papers.
+
+(insert citation)
+
+
+## 2009-05-28 
+
+Data retrieved from isorank.csail.mit.edu on 2009-05-28
+File: multiway_kpartite.tar.gz
+
+Wrote python script to convert to smat files.
+
+$ python convert_isorank_data.py 
+
+Has hardcoded filenames (ugh, sorry!)
+
+There are 13696 things in the bipartite file that don't appear in the graphs.
+
+Ugh, these files are crazy!
+
+Here is what I had to do.
+
+1.  Build a map from all the entries in the graph files
+2.  Add all the entries in the score file
+3.  Reparse the score file and map file for the structure
+
+At the end, I got.
+
+==> dmela-scere.smat <==
+9459 5696 34582
+4003 1298 0.447241
+5435 2831 0.195804
+5435 2469 0.109021
+5435 1499 0.614916
+5435 3203 0.482031
+2822 1616 0.430613
+1308 4857 0.162775
+7516 5497 0.061266
+7516 421 0.058788
+
+==> dmela.smat <==
+9459 9459 25830
+0 474 1
+1 224 1
+2 5580 1
+3 46 1
+4 197 1
+5 3792 1
+6 5581 1
+7 651 1
+8 1643 1
+
+==> scere.smat <==
+5696 5696 31898
+0 4185 1
+1 248 1
+2 1750 1
+3 4114 1
+4 2186 1
+5 2066 1
+6 1066 1
+7 2255 1
+8 890 1
+
+
+
